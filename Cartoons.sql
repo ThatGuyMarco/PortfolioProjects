@@ -1,5 +1,6 @@
 CREATE DATABASE CartoonsOfThe2000s
 
+--Create Channel Tables 
 
 CREATE TABLE Nickelodeon
 (
@@ -41,6 +42,8 @@ FinaleDate varchar(50),
 Creator varchar(50) NOT NULL,
 )
 
+--Insert into Channel Tables
+
 INSERT INTO Nickelodeon(Show, PremiereDate, FinaleDate, Creator)
 VALUES 
 ('Spongebob SquarePants', 'May 1, 1999', NULL, 'Stephen Hillenburg'),
@@ -69,8 +72,12 @@ SELECT * from Nickelodeon
 SELECT * FROM CartoonNetwork
 SELECT * FROM AdultSwim
 
+--Get results with Show from Same Creator
+
 SELECT SHOW FROM Nickelodeon
 WHERE CREATOR='BUTCH HARTMAN'
+
+--Perform Joins
 
 SELECT * FROM CartoonNetwork 
 LEFT JOIN AdultSwim
@@ -83,4 +90,3 @@ ON CartoonNetwork.Show=AdultSwim.Show
 SELECT * FROM CartoonNetwork 
 FULL OUTER JOIN AdultSwim
 ON CartoonNetwork.Show=AdultSwim.Show
-WHERE 
