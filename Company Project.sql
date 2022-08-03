@@ -1,3 +1,6 @@
+--- Here is a company database I created using a dataset I had to use for an assignment. I re-created it and added my own number of queries.
+
+
 CREATE DATABASE Company
 
 CREATE TABLE Location
